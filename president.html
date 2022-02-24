@@ -7,34 +7,34 @@
 
 <h2>President guess by Zabheen Shaik</h2>
 
-<form>
-    <label for="input1">Enter the secret president name</label>
-    <input id="input1" type="password" value="George Washington"> 
-    <br>
-    <label for="input2">Guess the president</label>
-    <input id="input2" type="text">
-    <input type="button" value="Check the guess" onclick="checkGuess()">
-    <div id="result">The correct/wrong count will be displayed here</div>
-    <script>
-        var correct=0;
-        var wrong=0;
-        function checkGuess(){
-            secret= document.getElementById("input1").value
-            guess= document.getElementById("input2").value
-            out = document.getElementById("result")
-            if(secret==guess)
-            {
-                correct++;
-                alert("You got it right")
-                out.innerHTML = "Correct count:"+correct+"  Wrong count:"+wrong
-            }else{
-                wrong++;
-                alert("Wrong President")
-                out.innerHTML = "Correct count:"+correct+"  Wrong count:"+wrong
+ <form>
+        <label for="input1">Enter the secret president name</label>
+        <input id="input1" type="password" value="George Washington"> 
+        <br>
+        <label for="input2">Guess the president</label>
+        <input id="input2" type="text">
+        <input type="button" value="Check the guess" onclick="checkGuess()">
+        <div id="result">The correct/wrong count will be displayed here</div>
+        <script>
+            var correct=0;
+            var wrong=0;
+            function checkGuess(){
+                secret= document.getElementById("input1").value
+                guess= document.getElementById("input2").value
+                out = document.getElementById("result")
+                if(secret==guess)
+                {
+                    correct++;
+                    alert("You got it right")
+                    out.innerHTML = "Correct count:"+correct+"  Wrong count:"+wrong
+                }else{
+                    wrong++;
+                    alert("Wrong President")
+                    out.innerHTML = "Correct count:"+correct+"  Wrong count:"+wrong
+                }
             }
-        }
-    </script>
-</form>
+        </script>
+    </form>
 
 </body>
 </html> 
