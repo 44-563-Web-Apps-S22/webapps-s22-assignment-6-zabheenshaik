@@ -36,5 +36,32 @@
         </script>
     </form>
 
+    <label>Image changes on click</label><br>
+    <div class="container">
+        <img src="swift.jpg" class="rounded" id="image" alt="swift" style="height: 100px;width: 100px;" onclick="swapImage()">
+    </div>
+
+    <script>
+        let useImage = 1;
+        function swapImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("image").src = "swift.jpg";
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById("image").src = "Hummingbird.jpg";
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById("image").src = "abyssinain.jpg";
+                    useImage = 1;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+
 </body>
 </html> 
